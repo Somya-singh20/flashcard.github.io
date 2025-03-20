@@ -1,0 +1,143 @@
+/* General Body Styling */
+body {
+    background: linear-gradient(to right, #f8cdda, #1eae98);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Title */
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Flashcard Container */
+.flashcard {
+    width: 450px;
+    height: 280px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Front & Back Design */
+.flashcard div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 24px;
+    transition: transform 0.6s;
+}
+
+/* Front Card Style */
+.front {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Back Card Style */
+.back {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: #333;
+    transform: rotateY(180deg);
+    font-size: 22px;
+}
+
+/* Flip Animation */
+.flashcard.flip .front {
+    transform: rotateY(180deg);
+}
+
+.flashcard.flip .back {
+    transform: rotateY(0deg);
+}
+
+/* Card Navigation Buttons */
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Primary Button Style */
+.btn-outline-primary {
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-outline-primary:hover {
+    background: linear-gradient(to right, #ff9a9e, #ffdde1);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 118, 137, 0.5);
+}
+
+/* Add Flashcard Card Design */
+.card {
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+/* Form Styles */
+form label {
+    font-weight: bold;
+    color: #555;
+}
+
+form input {
+    border: 2px solid #ff7eb3;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Add Button */
+.btn-success {
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-success:hover {
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 150, 255, 0.5);
+}
+
+/* Card Counter */
+#card-counter {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .flashcard {
+        width: 90%;
+        height: 220px;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

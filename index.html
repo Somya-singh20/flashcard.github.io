@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">📚 Flashcard Learning System</h1>
+        
+        <!-- Flashcard Container -->
+        <div class="card-container d-flex justify-content-center">
+            <div class="flashcard" id="flashcard" onclick="flipCard()">
+                <div class="front" id="question"></div>
+                <div class="back" id="answer"></div>
+            </div>
+        </div>
+
+        <!-- Card Navigation and Counter -->
+        <div class="text-center mt-3">
+            <p id="card-counter" class="mb-2">Card 1 of 1</p>
+            <button class="btn btn-outline-primary mr-2" onclick="prevCard()">Previous</button>
+            <button class="btn btn-outline-primary" onclick="nextCard()">Next</button>
+        </div>
+
+        <!-- Add Flashcard Form -->
+        <div class="card mt-5 p-3">
+            <h4 class="text-center">➕ Add New Flashcard</h4>
+            <form id="flashcard-form">
+                <div class="form-group">
+                    <label for="newQuestion">Question:</label>
+                    <input type="text" class="form-control" id="newQuestion" required>
+                </div>
+                <div class="form-group">
+                    <label for="newAnswer">Answer:</label>
+                    <input type="text" class="form-control" id="newAnswer" required>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Add Flashcard</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Custom Script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
